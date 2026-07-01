@@ -8,4 +8,16 @@
 - 2차 방정식의 해 : 근의 공식
     - $\frac{-b \pm \sqrt{b^2-4ac}}{2a}$
 - 코드 블럭
-    - 
+```c#
+private static void GetDirectory(string path)
+        {
+            string[] directories = Directory.GetDirectories(path);
+
+            foreach (string d in directories)
+            {
+                Console.WriteLine(d);
+
+                GetDirectory(d);
+            }                
+        }
+    
